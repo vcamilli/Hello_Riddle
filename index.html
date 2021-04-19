@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    {% extends "layout.html" %}
+    {% block content %}
+    <div class="home">
+        <h1>Welcome!</h1>
+        <p>What Were My First Words? {{guess}}</p>
+        <p><form action="{{ url_for('index') }}" method='post'>
+            Enter Your Best Guess: <input type='text' name='guess'><br>
+            <input type='submit' value='Submit'>
+            </form></p>
+    </div>
+    {% endblock %}
+</body>
+</html>
